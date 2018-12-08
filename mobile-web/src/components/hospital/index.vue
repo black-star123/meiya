@@ -4,7 +4,7 @@
             <div>全国<img src="../../assets/doctor/down.png" alt="箭头"></div>
             <div>智能排序<img src="../../assets/doctor/down.png" alt="箭头"></div>
         </div>
-        <hospital-list></hospital-list>
+        <hospital-list/>
     </div>
 </template>
 
@@ -12,7 +12,7 @@
 import hospitalList from "../common/hospitalList"
 export default {
     components:{
-        "hospitalList":hospitalList
+        hospitalList
     }
 }
 </script>
