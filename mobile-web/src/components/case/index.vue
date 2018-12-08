@@ -7,15 +7,15 @@
             </header>
             <div>
                 <ul>
-                    <li><img src="../../assets/case/IMG_4757.png" alt="1"></li>
-                    <li><img src="../../assets/case/IMG_4758.png" alt="2"></li>
-                    <li><img src="../../assets/case/IMG_4759.png" alt="3"></li>
-                    <li><img src="../../assets/case/IMG_4760.png" alt="4"></li>
-                    <li><img src="../../assets/case/IMG_4761.png" alt="5"></li>
-                    <li><img src="../../assets/case/IMG_4762.png" alt="6"></li>
-                    <li><img src="../../assets/case/IMG_4763.png" alt="7"></li>
-                    <li><img src="../../assets/case/IMG_4764.png" alt="8"></li>
-                    <li><img src="../../assets/case/IMG_4765.png" alt="9"></li>
+                    <li><img src="../../assets/case/IMG_4757.png" alt="1" preview="1"></li>
+                    <li><img src="../../assets/case/IMG_4758.png" alt="2" preview="1"></li>
+                    <li><img src="../../assets/case/IMG_4759.png" alt="3" preview="1"></li>
+                    <li><img src="../../assets/case/IMG_4760.png" alt="4" preview="1"></li>
+                    <li><img src="../../assets/case/IMG_4761.png" alt="5" preview="1"></li>
+                    <li><img src="../../assets/case/IMG_4762.png" alt="6" preview="1"></li>
+                    <li><img src="../../assets/case/IMG_4763.png" alt="7" preview="1"></li>
+                    <li><img src="../../assets/case/IMG_4764.png" alt="8" preview="1"></li>
+                    <li><img src="../../assets/case/IMG_4765.png" alt="9" preview="1"></li>
                 </ul>
             </div>
             <!-- 清除浮动 -->
