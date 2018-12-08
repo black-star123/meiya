@@ -12,7 +12,7 @@
                         <router-link to="/my">
                             <img src="../../assets/home/my.png" alt="我的">
                             <p>我的</p>
-                        </router-link>
+                        </router-link> 
                     </li>
                     <li>
                         <router-link to="/diary">

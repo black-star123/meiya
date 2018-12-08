@@ -47,10 +47,6 @@ export default new Router({
     {
       path:'/case',
       component:Case
-    },
-    {
-      path:'/diary',
-      component:Diary
     }
   ],
   mode:"history"
