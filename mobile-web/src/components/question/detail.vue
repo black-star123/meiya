@@ -15,9 +15,9 @@
             </div>
         </div>
         <div class="footer">
-            <div>
+            <router-link to="/" tag="div">
                 <img src="../../assets/question/home.png" alt="首页">
-            </div>
+            </router-link>
             <div>
                 <img src="../../assets/question/consult.png" alt="咨询">
                 <span>我要咨询</span>

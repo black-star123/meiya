@@ -7,9 +7,9 @@
                             <span>漂亮小姐姐</span>
                         </div>
                         <div>
-                            <img src="../../assets/home/before.jpg" alt="前">
+                            <img src="../../assets/home/before.jpg" alt="前" preview="1">
                             <span>before</span>
-                            <img src="../../assets/home/after.jpg" alt="后">
+                            <img src="../../assets/home/after.jpg" alt="后" preview="1">
                             <span>after</span>
                         </div>
                         <p>人在最好的年纪没有去做你想做的事情对于以后你就会留下 很大的一个遗憾，年轻给我我们无限的可能，也给了我 ……</p>
@@ -41,9 +41,9 @@
                             <span>漂亮小姐姐</span>
                         </div>
                         <div>
-                            <img src="../../assets/home/before.jpg" alt="前">
+                            <img src="../../assets/home/before.jpg" alt="前" preview="2">
                             <span>before</span>
-                            <img src="../../assets/home/after.jpg" alt="后">
+                            <img src="../../assets/home/after.jpg" alt="后" preview="2">
                             <span>after</span>
                         </div>
                         <p>人在最好的年纪没有去做你想做的事情对于以后你就会留下 很大的一个遗憾，年轻给我我们无限的可能，也给了我 ……</p>
@@ -75,9 +75,9 @@
                             <span>漂亮小姐姐</span>
                         </div>
                         <div>
-                            <img src="../../assets/home/before.jpg" alt="前">
+                            <img src="../../assets/home/before.jpg" alt="前" preview="3">
                             <span>before</span>
-                            <img src="../../assets/home/after.jpg" alt="后">
+                            <img src="../../assets/home/after.jpg" alt="后" preview="3">
                             <span>after</span>
                         </div>
                         <p>人在最好的年纪没有去做你想做的事情对于以后你就会留下 很大的一个遗憾，年轻给我我们无限的可能，也给了我 ……</p>
@@ -138,6 +138,7 @@ export default {
         margin-bottom: 12px;
         float: left;
         position: relative;
+        width: 100%;
     }
     #diary .card div div:nth-child(2) img{
         width: 48%;

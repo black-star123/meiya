@@ -12,109 +12,11 @@
             <p>南京华美整形外科专家<br><br>韩国延世大学医学整形硕士<br><br>中韩整形美容医学院会员<br><br>对美学数据有过人的、超精准的掌控力，深谙鼻部美学黄金 标准及其对应数值，坚持数字化测量、数字化分析、数字化 精微雕刻植入体。</p>
         </div>
         <div class="title">其他医生推荐</div>
-        <div class="recommend">
-            <ul>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>高圆圆<span>主任医师</span></h3>
-                        <p>北京丽都整形医院</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                        <ul>
-                            <li>
-                                <img src="../../assets/doctor/lable.png" alt="标签">
-                            </li>
-                            <li>双眼皮</li>
-                            <li>开眼角</li>
-                            <li>双眼皮吸脂</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>高圆圆<span>主任医师</span></h3>
-                        <p>北京丽都整形医院</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                        <ul>
-                            <li>
-                                <img src="../../assets/doctor/lable.png" alt="标签">
-                            </li>
-                            <li>双眼皮</li>
-                            <li>开眼角</li>
-                            <li>双眼皮吸脂</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>高圆圆<span>主任医师</span></h3>
-                        <p>北京丽都整形医院</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                        <ul>
-                            <li>
-                                <img src="../../assets/doctor/lable.png" alt="标签">
-                            </li>
-                            <li>双眼皮</li>
-                            <li>开眼角</li>
-                            <li>双眼皮吸脂</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>高圆圆<span>主任医师</span></h3>
-                        <p>北京丽都整形医院</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                        <ul>
-                            <li>
-                                <img src="../../assets/doctor/lable.png" alt="标签">
-                            </li>
-                            <li>双眼皮</li>
-                            <li>开眼角</li>
-                            <li>双眼皮吸脂</li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>高圆圆<span>主任医师</span></h3>
-                        <p>北京丽都整形医院</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                        <ul>
-                            <li>
-                                <img src="../../assets/doctor/lable.png" alt="标签">
-                            </li>
-                            <li>双眼皮</li>
-                            <li>开眼角</li>
-                            <li>双眼皮吸脂</li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <doctor/>
         <footer class="footer">
-            <div>
+            <router-link to="/" tag="div">
                 <img src="../../assets/question/home.png" alt="首页">
-            </div>
+            </router-link>
             <div>
                 <img src="../../assets/question/consult.png" alt="咨询">
                 <span>我要咨询</span>
@@ -124,8 +26,13 @@
 </template>
 
 <script>
+import doctor from "../common/doctor"
+
 export default {
-    name:'doc-detail'
+    name:'doc-detail',
+    components:{
+        doctor
+    }
 }
 </script>
 
@@ -174,60 +81,6 @@ export default {
         font-size: 16px;
         font-weight: bold;
         padding-left: 15px;
-    }
-    .recommend{
-        padding-bottom: 50px;
-    }
-    .recommend>ul>li{
-        height: 95px;
-        padding: 20px 15px 15px 15px;
-        border-bottom: 1px solid rgb(227, 214, 249);
-        font-size: 12px;
-    }
-    .recommend>ul>li::after{
-        clear: both;
-    }
-    .recommend ul li div:first-child{
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        background: url(../../assets/doctor/doctor.jpg) no-repeat center;
-        background-size: cover;
-        float: left;
-    }
-    .recommend ul li div:nth-of-type(2){
-        margin-left: 10px;
-        display: inline-block;
-        width: 78%;
-        float: left;
-    }
-    .recommend ul li div:nth-of-type(2) h3{
-        font-size: 15px;
-    }
-    .recommend ul li div:nth-of-type(2) h3 span{
-        margin-left: 10px;
-        font-size: 12px;
-    }
-    .recommend ul li div:nth-of-type(2) div{
-        margin-top: 5px;
-    }
-    .recommend ul li div:nth-of-type(2) div img{
-        height: 10px;
-        margin-right: 10px;
-    }
-    .recommend ul li div:nth-of-type(2) ul{
-        margin-top: 10px;
-    }
-    .recommend ul li div:nth-of-type(2) ul li{
-        float: left;
-        color: rgb(239, 181, 59);
-    }
-    .recommend ul li div:nth-of-type(2) ul li:not(:first-child){
-        margin-left: 10px;
-    }
-    .recommend ul li div:nth-of-type(2) ul li img{
-        width: 15px;
-        vertical-align: middle
     }
     .footer{
         height: 50px;

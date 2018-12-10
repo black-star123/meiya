@@ -1,7 +1,7 @@
 <template>
         <div class="list">
             <ul>
-                <li>
+                <router-link to="/hosDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
@@ -11,8 +11,8 @@
                             <span>5.0</span>
                         </div>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/hosDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
@@ -22,8 +22,8 @@
                             <span>5.0</span>
                         </div>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/hosDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
@@ -33,8 +33,8 @@
                             <span>5.0</span>
                         </div>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/hosDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
@@ -44,8 +44,8 @@
                             <span>5.0</span>
                         </div>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/hosDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
@@ -55,7 +55,7 @@
                             <span>5.0</span>
                         </div>
                     </div>
-                </li>
+                </router-link>
             </ul>
     </div>
 </template>

@@ -15,7 +15,7 @@
                         </router-link> 
                     </li>
                     <li>
-                        <router-link to="/diary">
+                        <router-link to="/">
                             <img src="../../assets/home/consult.png" alt="咨询">
                             <p>咨询</p>
                         </router-link>
@@ -47,7 +47,7 @@
             </div>
         </div>
         <footer id="footer">
-            <nav>
+            <nav :class="{'navfix':isfix}">
                 <div>
                     <ul>
                         <li v-for="(item,index) in list" :key="index" @click="active(index)" :class="{'now':index==nowindex}">{{item.title}}</li>
@@ -76,16 +76,31 @@ export default {
                 {"title":"自体脂肪"},
                 {"title":"标签"},
                 {"title":"推荐"},
+                {"title":"推荐"},
+                {"title":"推荐"},
+                {"title":"推荐"},
             ],
-            nowindex:0
+            nowindex:0,
+            isfix:false
         }
     },
     components:{
         diary
     },
+    mounted(){
+        window.addEventListener("scroll",this.watchScroll)
+    },
     methods:{
         active(num){
             this.nowindex=num
+        },
+        watchScroll(){
+            var scrollTop=window.pageYOffset||document.documentElement.scrollTop||document.body.scrollTop;
+            if(scrollTop>246){
+                this.isfix=true
+            }else{
+                this.isfix=false
+            }
         }
     }
 }
@@ -102,6 +117,15 @@ export default {
 .now{
     border-bottom: 2px solid rgb(170, 129, 223);
     font-weight: bolder
+}
+/* 中部导航吸顶样式 */
+.navfix{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: white;
+    padding-top: 5px;
+    width: 100%;
 }
 .input{
     height: 40px;

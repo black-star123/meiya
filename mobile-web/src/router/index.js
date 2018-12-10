@@ -10,6 +10,9 @@ import Doctor from '@/components/doctor/index'
 import Case from '@/components/case/index'
 import Diary from '@/components/common/diary'
 import hosDetail from '@/components/hospital/detail'
+import docDetail from '@/components/doctor/detail'
+import questionList from '@/components/question/detailList'
+import questionDetail from '@/components/question/detail'
 
 
 Vue.use(Router)
@@ -19,6 +22,9 @@ export default new Router({
     {
       path: '/',
       component: Home,
+      children:[
+        {path:'/diary',component:Diary}
+      ]
     },
     {
       path: '/city',
@@ -47,6 +53,22 @@ export default new Router({
     {
       path:'/case',
       component:Case
+    },
+    {
+      path:'/hosDetail',
+      component:hosDetail
+    },
+    {
+      path:'/docDetail',
+      component:docDetail
+    },
+    {
+      path:'/questionList',
+      component:questionList
+    },
+    {
+      path:'/questionDetail',
+      component:questionDetail
     }
   ],
   mode:"history"

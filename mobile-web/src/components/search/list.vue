@@ -3,8 +3,8 @@
         <div id="search">
             <div class="input">
                 <span><img src="../../assets/search/search.png" alt="搜索"></span>
-                <input type="text" placeholder="隆鼻">
-                <span><img src="../../assets/search/del.png" alt="删除"></span>
+                <input id="oinput" type="text" placeholder="隆鼻">
+                <span @click="del"><img src="../../assets/search/del.png" alt="删除"></span>
             </div>
         </div>
         <nav>
@@ -37,6 +37,11 @@ export default {
     data(){
         return{
             index:1
+        }
+    },
+    methods:{
+        del(){
+            document.getElementById("oinput").value=''
         }
     },
     components:{

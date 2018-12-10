@@ -2,7 +2,7 @@
 <div id="doctor">
      <div class="content">
             <ul>
-                <li>
+                <router-link to="/docDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>高圆圆<span>主任医师</span></h3>
@@ -20,8 +20,8 @@
                             <li>双眼皮吸脂</li>
                         </ul>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/docDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>高圆圆<span>主任医师</span></h3>
@@ -39,8 +39,8 @@
                             <li>双眼皮吸脂</li>
                         </ul>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/docDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>高圆圆<span>主任医师</span></h3>
@@ -58,8 +58,8 @@
                             <li>双眼皮吸脂</li>
                         </ul>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/docDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>高圆圆<span>主任医师</span></h3>
@@ -77,8 +77,8 @@
                             <li>双眼皮吸脂</li>
                         </ul>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/docDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>高圆圆<span>主任医师</span></h3>
@@ -96,8 +96,8 @@
                             <li>双眼皮吸脂</li>
                         </ul>
                     </div>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/docDetail" tag="li">
                     <div></div>
                     <div>
                         <h3>高圆圆<span>主任医师</span></h3>
@@ -115,7 +115,7 @@
                             <li>双眼皮吸脂</li>
                         </ul>
                     </div>
-                </li>
+                </router-link>
             </ul>
         </div>
     </div>
@@ -130,6 +130,7 @@ export default {
 <style scoped>
     #doctor{
         font-size: 12px;
+        padding-bottom: 50px;
     }
    #doctor .content>ul>li{
         height: 95px;

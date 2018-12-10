@@ -10,110 +10,23 @@
         <div class="content">
             <h3>关于该院</h3>
             <p>成立于2004年的四川米兰美容外科医院座落在成都宽窄巷 子附近的中同仁路55号(市妇幼保健院旁)，是中国十强整形 美容医院之一<br><br>目前，米兰整形医院拥有医技人员140余人，其中以吴开泉 院长、张义明副院长为首的十多位资深的整形美容、皮肤美 容专家均为中国整<br><br>2011年，米兰整形医院将搬迁到成都市人民南路四段的新 址。届时，12000m2的美容专科医院规模、千级层流净化 手术室、五星</p>
-            <ul>
-                <li><img src="../../assets/hospital/hospital_03.png" alt="医院详情"></li>
-                <li><img src="../../assets/hospital/hospital_05.png" alt="医院详情"></li>
-                <li><img src="../../assets/hospital/hospital_07.png" alt="医院详情"></li>
-                <li><img src="../../assets/hospital/hospital_03.png" alt="医院详情"></li>
-            </ul>
+            <div>
+                <ul>
+                    <li><img src="../../assets/hospital/hospital_03.png" alt="医院详情" preview="1"></li>
+                    <li><img src="../../assets/hospital/hospital_05.png" alt="医院详情" preview="1"></li>
+                    <li><img src="../../assets/hospital/hospital_07.png" alt="医院详情" preview="1"></li>
+                    <li><img src="../../assets/hospital/hospital_03.png" alt="医院详情" preview="1"></li>
+                    <li><img src="../../assets/hospital/hospital_03.png" alt="医院详情" preview="1"></li>
+                    <li><img src="../../assets/hospital/hospital_03.png" alt="医院详情" preview="1"></li>
+                </ul>
+            </div>
         </div>
         <div class="title">其他医院推荐</div>
-        <div class="list">
-            <ul>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
-                        <p>北京市朝阳区慧忠里103楼D座</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
-                        <p>北京市朝阳区慧忠里103楼D座</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
-                        <p>北京市朝阳区慧忠里103楼D座</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
-                        <p>北京市朝阳区慧忠里103楼D座</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
-                        <p>北京市朝阳区慧忠里103楼D座</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
-                        <p>北京市朝阳区慧忠里103楼D座</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
-                        <p>北京市朝阳区慧忠里103楼D座</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div></div>
-                    <div>
-                        <h3>北京丽都整形医院<img src="../../assets/hospital/lable.png" alt="标签"></h3>
-                        <p>北京市朝阳区慧忠里103楼D座</p>
-                        <div>
-                            <img src="../../assets/doctor/score.png" alt="评分">
-                            <span>5.0</span>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <hospital-list/>
         <footer class="footer">
-            <div>
+            <router-link tag="div" to="/">
                 <img src="../../assets/question/home.png" alt="首页">
-            </div>
+            </router-link>
             <div>
                 <img src="../../assets/question/consult.png" alt="咨询">
                 <span>我要咨询</span>
@@ -123,8 +36,12 @@
 </template>
 
 <script>
+import hospitalList from "../common/hospitalList"
 export default {
-    name:'doc-detail'
+    name:'doc-detail',
+    components:{
+        hospitalList
+    }
 }
 </script>
 
@@ -168,17 +85,23 @@ export default {
         font-size: 15px;
         margin-bottom: 10px
     }
-    .content ul{
-        width: 452px;
-        height: 61px;
+    .content div{
+        overflow-x: scroll;
+        width: 100%;
         margin-top: 20px;
     }
-    .content ul li{
+    .content div::-webkit-scrollbar{
+        display: none
+    }
+    .content div ul{
+        width: 4520px;
+    }
+    .content div ul li{
         width: 98px;
         height: 61px;
         float: left;
     }
-    .content ul li:not(:first-child){
+    .content div ul li:not(:first-child){
         margin-left: 15px;
     }
     .title{

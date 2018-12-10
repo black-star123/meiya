@@ -7,7 +7,7 @@
         <div class="content">
             <h3>全部 8个回答</h3>
             <ul>
-                <li>
+                <router-link to="/questionDetail" tag="li">
                     <a href="#">
                         <div>
                             <span></span>
@@ -23,8 +23,8 @@
                             </div>
                         </div>
                     </a>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/questionDetail" tag="li">
                     <a href="#">
                         <div>
                             <span></span>
@@ -40,8 +40,8 @@
                             </div>
                         </div>
                     </a>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/questionDetail" tag="li">
                     <a href="#">
                         <div>
                             <span></span>
@@ -57,8 +57,8 @@
                             </div>
                         </div>
                     </a>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/questionDetail" tag="li">
                     <a href="#">
                         <div>
                             <span></span>
@@ -74,8 +74,8 @@
                             </div>
                         </div>
                     </a>
-                </li>
-                <li>
+                </router-link>
+                <router-link to="/questionDetail" tag="li">
                     <a href="#">
                         <div>
                             <span></span>
@@ -91,7 +91,7 @@
                             </div>
                         </div>
                     </a>
-                </li>
+                </router-link>
             </ul>
         </div>
         <footer>

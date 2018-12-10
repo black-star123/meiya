@@ -63,39 +63,11 @@
             </div>
             <div>
                 <ul>
-                    <li>
+                    <li v-for="(item,index) in comments" :key="index">
                         <div>
                             <span><img src="../../assets/case/timg.jpg" alt="头像"></span>
-                            <span>谢广坤</span>
-                            <span>2018-08-18</span>
-                        </div>
-                        <div>
-                            <img src="../../assets/home/praise.png" alt="点赞">
-                            <span>9</span>
-                            <img src="../../assets/home/comment.png" alt="评论">
-                            <span>9</span>
-                        </div>
-                        <p>小姐姐好美！</p>
-                    </li>
-                    <li>
-                        <div>
-                            <span><img src="../../assets/case/timg.jpg" alt="头像"></span>
-                            <span>谢广坤</span>
-                            <span>2018-08-18</span>
-                        </div>
-                        <div>
-                            <img src="../../assets/home/praise.png" alt="点赞">
-                            <span>9</span>
-                            <img src="../../assets/home/comment.png" alt="评论">
-                            <span>9</span>
-                        </div>
-                        <p>小姐姐好美！</p>
-                    </li>
-                    <li>
-                        <div>
-                            <span><img src="../../assets/case/timg.jpg" alt="头像"></span>
-                            <span>谢广坤</span>
-                            <span>2018-08-18</span>
+                            <span>{{item.name}}</span>
+                            <span>{{item.time}}</span>
                         </div>
                         <div>
                             <img src="../../assets/home/praise.png" alt="点赞">
@@ -124,7 +96,18 @@
 
 <script>
 export default {
-    name:"theCase"
+    name:"theCase",
+    data(){
+        return{
+            comments:[
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+            ]
+        }
+    }
 }
 </script>
 
