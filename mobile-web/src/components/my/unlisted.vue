@@ -5,7 +5,7 @@
             <img src="../../assets/my/header.png" alt="头像">
             <p>未登录</p>
         </div>
-        <div><a href="#">授权使用微信登录</a></div>
+        <div><a href="/my">授权使用微信登录</a></div>
     </div>
 </template>
 
@@ -50,5 +50,6 @@ export default {
         background: rgb(16, 173, 25);
         line-height: 45px;
         text-align: center;
+        -webkit-tap-highlight-color: transparent
     }
 </style>

@@ -3,24 +3,26 @@
         <div id="search">
             <div class="input">
                 <span><img src="../../assets/search/search.png" alt="搜索"></span>
-                <input id="oinput" type="text" placeholder="隆鼻">
+                <input type="search" placeholder="热搜：隆鼻 双眼皮" @keypress="starSearch" ref="input1">
                 <span @click="del"><img src="../../assets/search/del.png" alt="删除"></span>
             </div>
         </div>
         <nav>
             <ul>
-                <li @click="index=1" :class="{'active':index==1}">日记</li>
-                <li @click="index=2" :class="{'active':index==2}">医生</li>
-                <li @click="index=3" :class="{'active':index==3}">医院</li>
-                <li @click="index=4" :class="{'active':index==4}">问答</li>
+                <li @click="diaryclick" :class="{'active':index==1}">日记</li>
+                <li @click="doctorclick" :class="{'active':index==2}">医生</li>
+                <li @click="hospitalclick" :class="{'active':index==3}">医院</li>
+                <li @click="questionclick" :class="{'active':index==4}">问答</li>
             </ul>
         </nav>
         <div>
-            <diary v-show="index==1"></diary>
-            <doctor v-show="index==2"></doctor>
-            <hospital-list v-show="index==3"></hospital-list>
-            <question v-show="index==4"></question>
-            <sorry v-show="index==5"></sorry>
+            <div v-show="this.error">
+                <diary v-if="index==1"></diary>
+                <doctor v-if="index==2"></doctor>
+                <hospital-list v-if="index==3"></hospital-list>
+                <question v-if="index==4"></question>
+            </div>
+            <router-view v-show="!this.error"></router-view>
         </div>
     </div>
 </template>
@@ -30,27 +32,52 @@ import diary from "../common/diary"
 import doctor from "../common/doctor"
 import hospitalList from "../common/hospitalList"
 import question from "../question/index"
-import sorry from "./404"
-
 export default {
     name:'searchList',
     data(){
         return{
-            index:1
+            index:1,
+            error:true
         }
+    },
+    created(){
+        console.log(this.$route.params.error);
+        console.log(typeof(this.$route.params.error));
+        if(this.$route.params.error){
+            this.error=true
+        }else{
+            this.error=false;
+        }
+    
+    },
+    mounted(){
+        this.$refs.input1.value=this.$route.params.messge
     },
     methods:{
         del(){
-            document.getElementById("oinput").value=''
+            this.$refs.input1.value='';
+            console.log(this.error)
+        },
+        diaryclick(){
+                this.index=1
+        },
+        doctorclick(){
+            this.index=2;
+        },
+        hospitalclick(){
+            this.index=3;
+        },
+        questionclick(){
+            this.index=4;
+        },
+        starSearch(){
+            console.log(this.$refs.input1.value),
+            console.log(this.$route.params.error)
         }
     },
     components:{
-        "diary":diary,
-        "doctor":doctor,
-        "hospitalList":hospitalList,
-        "question":question,
-        "sorry":sorry
-    },
+        diary,doctor,hospitalList,question
+    }
 }
 </script>
 
@@ -91,7 +118,11 @@ export default {
         height: 39px;
         float: left;
         vertical-align: middle;
-        margin-left: 3%
+        margin-left: 3%;
+    }
+    /* 隐藏输入框默认× */
+    #search .input input::-webkit-search-cancel-button{
+        display: none
     }
     nav{
         padding: 0 15px;
@@ -117,6 +148,8 @@ export default {
     }
     .active{
         color: rgb(170, 129, 223);
-        border-bottom: 2px solid
+        border-bottom: 2px solid;
+        transform: scale(1.1);
+        transition: transform .25s
     }
 </style>

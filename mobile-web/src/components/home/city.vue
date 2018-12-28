@@ -3,14 +3,10 @@
         <div class="header">当前定位<strong>成都</strong></div>
         <div class="content">
             <ul>
-                <li v-for="(item,index) in items" @click="active(index)" :class="{'now':index==nowindex}" :key="index">{{item.name}}</li>
+                <li v-for="(item,index) in items" @click="active(index)" :class="{'now':index==nowindex}" :key="index" :id="index">{{item.name}}</li>
             </ul>
             <ul>
-                <li>全国</li>
-                <li>北京</li>
-                <li>上海</li>
-                <li>广州</li>
-                <li>深圳</li>
+                <li v-for="(item,index) in list" :key="index">{{item.name}}</li>
             </ul>
         </div>
     </div>
@@ -33,6 +29,13 @@ export default {
                 {"id":9,"name":"重庆"},
                 {"id":10,"name":"新疆"},
                 {"id":11,"name":"西藏"},
+            ],
+            list:[
+                {"id":3,"name":"上海"},
+                {"id":4,"name":"深圳"},
+                {"id":5,"name":"广州"},
+                {"id":6,"name":"湖南"},
+                {"id":7,"name":"安徽"},
             ],
             nowindex:0
         }
@@ -82,5 +85,7 @@ export default {
     color: rgb(170, 129, 223);
     border-left: 5px solid rgb(170, 129, 223);
     background: white !important;
+    font-size: 15px;
+    transition: all .25s
 }
 </style>

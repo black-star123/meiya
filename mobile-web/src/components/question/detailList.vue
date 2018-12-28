@@ -8,7 +8,7 @@
             <h3>全部 8个回答</h3>
             <ul>
                 <router-link to="/questionDetail" tag="li">
-                    <a href="#">
+                    <div class="list">
                         <div>
                             <span></span>
                             <span>王医生</span>
@@ -16,81 +16,18 @@
                         <div>
                             <p>你好，玻尿酸在注射之后，会被人体不断的吸收代谢， 最终让玻尿酸分子之间的交联度降低，从而失效，这 段时间一般维持6-8个月，也是比较常见的玻尿酸效果持续时间，但这个数值并不固定，还和其他几个因素有关。</p>
                             <div>
-                                <img src="../../assets/home/see.png" alt="浏览">
-                                <span>998</span>
-                                <img src="../../assets/home/praise.png" alt="点赞">
-                                <span>899</span>
+                                <span>
+                                    <img src="../../assets/home/see.png" alt="浏览">
+                                    <span>998</span>
+                                </span>
+                                <span @click.stop="praise">
+                                    <img src="../../assets/home/praise.png" alt="点赞" v-show="!clicked">
+                                    <img src="../../assets/home/red.png" alt="点赞" v-show="clicked" >
+                                    <span>899</span>
+                                </span>
                             </div>
                         </div>
-                    </a>
-                </router-link>
-                <router-link to="/questionDetail" tag="li">
-                    <a href="#">
-                        <div>
-                            <span></span>
-                            <span>王医生</span>
-                        </div>
-                        <div>
-                            <p>你好，玻尿酸在注射之后，会被人体不断的吸收代谢， 最终让玻尿酸分子之间的交联度降低，从而失效，这 段时间一般维持6-8个月，也是比较常见的玻尿酸效果持续时间，但这个数值并不固定，还和其他几个因素有关。</p>
-                            <div>
-                                <img src="../../assets/home/see.png" alt="浏览">
-                                <span>998</span>
-                                <img src="../../assets/home/praise.png" alt="点赞">
-                                <span>899</span>
-                            </div>
-                        </div>
-                    </a>
-                </router-link>
-                <router-link to="/questionDetail" tag="li">
-                    <a href="#">
-                        <div>
-                            <span></span>
-                            <span>王医生</span>
-                        </div>
-                        <div>
-                            <p>你好，玻尿酸在注射之后，会被人体不断的吸收代谢， 最终让玻尿酸分子之间的交联度降低，从而失效，这 段时间一般维持6-8个月，也是比较常见的玻尿酸效果持续时间，但这个数值并不固定，还和其他几个因素有关。</p>
-                            <div>
-                                <img src="../../assets/home/see.png" alt="浏览">
-                                <span>998</span>
-                                <img src="../../assets/home/praise.png" alt="点赞">
-                                <span>899</span>
-                            </div>
-                        </div>
-                    </a>
-                </router-link>
-                <router-link to="/questionDetail" tag="li">
-                    <a href="#">
-                        <div>
-                            <span></span>
-                            <span>王医生</span>
-                        </div>
-                        <div>
-                            <p>你好，玻尿酸在注射之后，会被人体不断的吸收代谢， 最终让玻尿酸分子之间的交联度降低，从而失效，这 段时间一般维持6-8个月，也是比较常见的玻尿酸效果持续时间，但这个数值并不固定，还和其他几个因素有关。</p>
-                            <div>
-                                <img src="../../assets/home/see.png" alt="浏览">
-                                <span>998</span>
-                                <img src="../../assets/home/praise.png" alt="点赞">
-                                <span>899</span>
-                            </div>
-                        </div>
-                    </a>
-                </router-link>
-                <router-link to="/questionDetail" tag="li">
-                    <a href="#">
-                        <div>
-                            <span></span>
-                            <span>王医生</span>
-                        </div>
-                        <div>
-                            <p>你好，玻尿酸在注射之后，会被人体不断的吸收代谢， 最终让玻尿酸分子之间的交联度降低，从而失效，这 段时间一般维持6-8个月，也是比较常见的玻尿酸效果持续时间，但这个数值并不固定，还和其他几个因素有关。</p>
-                            <div>
-                                <img src="../../assets/home/see.png" alt="浏览">
-                                <span>998</span>
-                                <img src="../../assets/home/praise.png" alt="点赞">
-                                <span>899</span>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </router-link>
             </ul>
         </div>
@@ -121,7 +58,21 @@
 
 <script>
 export default {
-    name:'detailList'
+    name:'detailList',
+    data(){
+        return{
+            clicked:this.$store.getters.questionimg
+        }
+    },
+    methods:{
+        praise(){
+            this.clicked=!this.clicked;
+            if(this.clicked){
+                this.$store.commit("addquestionimg")
+            }else{
+                this.$store.commit("reducequestionimg")
+        }},
+    },
 }
 </script>
 
@@ -156,17 +107,17 @@ export default {
     #detailList .content ul li{
         margin-bottom: 30px
     }
-    #detailList .content ul li a{
+    #detailList .content ul li .list{
         color: black;
     }
-    #detailList .content ul li a div:first-child{
+    #detailList .content ul li .list div:first-child{
         margin-top: 15px;
     }
-    #detailList .content ul li a div:first-child span{
+    #detailList .content ul li .list div:first-child span{
         vertical-align: middle;
         font-size: 12px;
     }
-    #detailList .content ul li a>div:first-child>span:first-child{
+    #detailList .content ul li .list>div:first-child>span:first-child{
         display: inline-block;
         background: url(../../assets/question/doctor.jpg) no-repeat center;
         background-size: 200%;
@@ -175,22 +126,22 @@ export default {
         width: 25px;
         margin-right: 10px
     }
-    #detailList .content ul li a>div:last-child{
+    #detailList .content ul li .list>div:last-child{
         margin: 10px 0 0 40px;
     }
-    #detailList .content ul li a div:last-child p{
+    #detailList .content ul li .list div:last-child p{
         text-align: justify;
         font-size: 13px;
         margin-bottom: 10px;
     }
-    #detailList .content ul li a div:last-child div span{
+    #detailList .content ul li .list div:last-child div>span{
         font-size: 11px;
         color: rgb(141, 141, 141)
     }
-    #detailList .content ul li a div:last-child div img:last-of-type{
+    #detailList .content ul li .list div:last-child div>span:last-of-type{
         margin-left: 10px;
     }
-    #detailList .content ul li a div:last-child div img,#detailList div ul li a div:last-child div span{
+    #detailList .content ul li .list div:last-child div img,#detailList div ul li .list div:last-child div span{
         vertical-align: middle
     }
     #detailList footer h1{

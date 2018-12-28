@@ -45,9 +45,10 @@
                         <span>999次浏览</span>
                         <img src="../../assets/home/see.png" alt="浏览">
                     </div>
-                    <div>
-                        <span>9999个赞</span>
-                        <img src="../../assets/home/praise.png" alt="点赞">
+                    <div @click="praise">
+                        <span>{{count}}个赞</span>
+                        <img src="../../assets/home/praise.png" alt="点赞" v-show="!clicked">
+                        <img src="../../assets/home/red.png" alt="点赞" v-show="clicked">
                     </div>
                 </div>
             </div>
@@ -105,7 +106,30 @@ export default {
                 {"name":"谢广坤","time":"2018-08-18"},
                 {"name":"谢广坤","time":"2018-08-18"},
                 {"name":"谢广坤","time":"2018-08-18"},
-            ]
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+                {"name":"谢广坤","time":"2018-08-18"},
+            ],
+            clicked:this.$store.getters.praiseimg
+        }
+    },
+    methods:{
+        praise(){
+            this.clicked=!this.clicked;
+            if(this.clicked){
+                this.$store.commit("addpraisenum")
+            }else{
+                this.$store.commit("reducepraisenum")
+        }}
+    },
+    computed:{
+        count(){
+            return this.$store.getters.praisenum
         }
     }
 }
@@ -200,6 +224,8 @@ export default {
     #comment{
         padding-left: 4%;
         padding-right: 4%;
+        margin-top: -70px;
+        padding-top: 70px
     }
     #comment>p{
         font-size: 13px;
@@ -320,6 +346,7 @@ export default {
         bottom: 60px;
         right: 15px;
         text-align: center;
+        -webkit-tap-highlight-color: transparent;
     }
     #theCase>a img{
         width: 25px;

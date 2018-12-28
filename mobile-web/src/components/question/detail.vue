@@ -3,7 +3,7 @@
         <div class="header">
             <header>
                 <h3>玻尿酸隆鼻可以管多久？</h3>
-                <a href="#">共8个回答<span><img src="../../assets/question/right.png" alt="箭头"></span></a>
+                <a href="/questionList">共8个回答<span><img src="../../assets/question/right.png" alt="箭头"></span></a>
             </header>
             <div class="content">
                 <div>
@@ -46,7 +46,8 @@ export default {
         font-size: 12px;
         vertical-align: middle;
         float: right;
-        margin-top: 20px
+        margin-top: 20px;
+        -webkit-tap-highlight-color: transparent
     }
     .header header a span img{
         vertical-align: middle;
